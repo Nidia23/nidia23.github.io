@@ -1,0 +1,235 @@
+@use '../core/variables' as vars;
+
+.page__header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+     @media (min-width: vars.$tablet) {
+        padding-left: 5rem;
+        padding-right: 5rem;
+        }
+
+    @media (min-width: vars.$desktop) {
+        inline-size: min(100%, 1000rem); 
+        margin-inline: auto;
+        }
+  
+    .header__nav-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 2rem;
+        padding-bottom: 0.5rem;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        background-color: white;
+
+
+        .header-nav-bar__logo {
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            cursor: pointer;
+            width: 100%;
+
+            .logo__title {
+                display: flex;
+                flex-direction: row;
+                text-decoration: none;
+                align-items: center;
+                gap: 0.8rem;
+                color: vars.$dark-color;
+                font-family: vars.$text-font;
+                font-size: vars.$text-style;
+                font-weight: vars.$big-weight;
+                top: 0;
+                left: 0;
+                margin: 0;
+
+            .logo__img {
+                width: 3rem;
+                margin-left: 0.3rem;
+            }
+
+            &:hover {
+                color: vars.$primary-color;
+                transition: color 0.3s ease;
+                }
+            }
+        }
+
+        .header-nav-bar__nav {
+            display: none;
+
+                @media (min-width: vars.$tablet) {
+
+                    display: inline-block;
+                    gap: 0.5rem;
+                    width: 100%;   
+                    
+                    .nav__list {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 4rem;
+                        justify-content: end;
+
+                        .nav-list__option, .option__link {
+                            font-family: vars.$text-font;
+                            font-size: vars.$small-text;
+                            color: vars.$medium-color;
+                            font-weight: vars.$title-weight;
+                            text-decoration: none;
+                            
+                            &:hover {
+                                color: vars.$dark-color;
+                                transition: color 0.3s ease;
+                                transform: scale(1.1);
+                                }
+
+                             &:visited {
+                                color: vars.$medium-color; 
+                                }
+                        }
+
+                    }
+                }
+        }
+
+        .header__hamburger {
+            top: 0; 
+            right: 0; 
+            margin: 0; 
+            border: 0; 
+            cursor: pointer;
+
+            @media (min-width: vars.$tablet) {
+                display: none;
+            }
+
+            .hamburger__img {
+                width: 4rem;
+            }
+        }
+
+    }
+
+    .header__hero {
+        width: 100%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        gap: 1rem;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+
+            @media (min-width: vars.$tablet) {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                gap: 1rem;
+
+                .header-hero__img {
+                    width: 50rem;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    margin: 0;
+                    padding: 0;
+
+                    .hero-img__img {
+                        display: inline-block;
+                        right: 0;
+                        }
+                    }
+                }
+
+        
+
+        .header-hero__title {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+            .hero-title__title {
+                font-family: vars.$text-font;
+                font-size: vars.$first-title-style-mobile;
+                font-weight: vars.$big-weight;
+                color: vars.$dark-color;
+                text-align: center;
+
+                @media (min-width: vars.$tablet) {
+                    text-align: left;
+                }
+                
+                    .title__pink {
+                        color: vars.$secondary-color;
+                    }
+            }
+
+
+            .button {
+                width: 90%;
+                text-decoration: none;
+
+                @media (min-width: vars.$tablet) {
+                    width: 40%;
+                    margin-left: 0.5rem;
+                    margin-right: auto;
+                }
+            }
+
+        }
+
+    }
+
+}
+
+
+.page .header__nav-bar .header-nav-bar__nav .nav__list
+.option__link[href$="index.html"] {
+  font-weight: vars.$big-weight;
+  color: vars.$primary-color;
+}
+
+.page .header__nav-bar .header-nav-bar__nav .nav__list
+.option__link[href$="index.html"]:visited {
+  color: vars.$primary-color;
+}
+
+.contact .header__nav-bar .header-nav-bar__nav .nav__list
+.option__link[href$="contact.html"] {
+  font-weight: vars.$big-weight;
+  color: vars.$primary-color;
+}
+
+.contact .header__nav-bar .header-nav-bar__nav .nav__list
+.option__link[href$="contact.html"]:visited {
+  color: vars.$primary-color;
+}
+
+.contact .header__nav-bar .header-nav-bar__nav .nav__list
+.option__link[href$="contact.html"] {
+  font-weight: vars.$big-weight;
+  color: vars.$primary-color;
+}
+
+.ciudades .header__nav-bar .header-nav-bar__nav .nav__list
+.option__link[href$="#top-destinos"] {
+  font-weight: vars.$big-weight;
+  color: vars.$primary-color;
+}
+
+.ciudades .header__nav-bar .header-nav-bar__nav .nav__list
+.option__link[href$="#top-destinos"]:visited {
+  color: vars.$primary-color;
+}

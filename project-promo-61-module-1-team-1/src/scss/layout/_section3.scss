@@ -1,0 +1,328 @@
+@use '../core/variables' as vars;
+
+.servicios {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+    
+
+&__imagen {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2rem;
+    
+    img {
+        width: 90%;
+        max-width: 23.68rem;
+        height: auto;
+        
+    }   
+}
+
+&__titular {
+    text-align: center;
+    margin-bottom: 1rem;
+
+    p {
+        font-family: vars.$text-font;
+        font-size: vars.$regular;
+        color: vars.$secondary-color;
+        font-weight: vars.$title-weight;
+        padding-bottom: 0.5rem;
+        margin: 0;
+    }
+
+    h2 {
+        font-family: vars.$text-font;
+        font-size: vars.$big4;
+        margin: 0.75rem;
+    }
+}
+
+&__contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        max-width: 25rem; 
+        margin-bottom: 2.5rem;
+
+        .textoint {
+            font-family: vars.$text-font;
+
+                h4 {
+                font-size: vars.$regular15;
+                font-weight: vars.$big-weight;
+                margin: 0.6rem 0;
+            
+                }
+
+                p {
+                font-size: vars.$regular;
+                color: vars.$medium-color;
+                line-height: 1.5;
+                margin: 0.6rem 0;
+                }
+        }
+
+        .dibujo {
+            display: inline-flex;
+            width: 5.5rem;
+            height: 5.5rem;
+            margin-bottom: 0.5rem;
+            object-fit: contain;            
+        }
+
+     &__uno {
+        padding-left: 1.56rem;
+        margin: 1.56rem 0;
+        
+        
+         img {
+                background-color: vars.$color-orange;
+                border-radius: 30%;
+                padding: 1rem;       
+            }
+     }  
+     
+    &__dos {
+        margin: 1.5rem 0;
+        border: 1.2px solid vars.$medium-color;
+        border-radius: 1.56rem;
+        padding: 1.56rem;
+
+        img {
+            background-color: vars.$color-yellow;
+            border-radius: 30%;
+            padding: 1rem; 
+
+        }
+     }
+    
+    &__tres {
+        padding-left: 1.56rem;
+        margin: 1.56rem 0;
+
+
+        img {
+            background-color: vars.$secondary-color;
+            padding: 1rem;
+            border-radius: 30%;
+
+        }
+    }
+
+    }
+}
+
+
+}
+
+//tablet
+
+@media all and (min-width: vars.$tablet) {
+    .servicios {
+        display: grid;
+        margin: 2rem 0.62rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 1.2rem;
+
+
+        &__titular {
+        grid-column: 1;
+        grid-row: 1;
+        padding-left: 2.5rem;
+        text-align: left;
+        margin-bottom: 1rem;
+        
+        p {
+            font-size: vars.$small-text;
+        }
+
+        h2 {
+            font-size: vars.$big6;
+            margin: 0;
+        }
+
+        }
+
+        &__contenido {
+
+            .card {
+                max-width: 50rem; 
+
+                .textoint {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-left: 1rem;
+
+                        h4 {
+                        font-size: vars.$small-text;
+                        margin: 0rem 0;
+                        }
+
+                        p {
+                            font-size: vars.$regular15;
+                            margin: 0;
+                        }
+
+                }
+                
+                .dibujo {
+                    width: 6rem;
+                    height: 6rem;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        
+                        width: 100%;
+                        height: auto;
+                        
+                    }
+                }
+               
+            &__uno {
+                display: grid;
+                grid-template-columns: 0.75fr 2.25fr;
+                align-items: center;
+                margin-bottom: 1.5rem;
+                                          
+               }
+
+            &__dos {
+                display: grid;
+                grid-template-columns: 0.75fr 2.25fr;
+                align-items: center;
+                margin-bottom: 1.5rem;
+               
+               }
+
+            &__tres {
+                display: grid;
+                grid-template-columns: 0.75fr 2.25fr;
+                align-items: center;
+                margin-bottom: 1.5rem;
+               
+               }
+
+            }
+
+
+        }
+
+        &__imagen {
+            grid-column: 2;
+            grid-row: 1 / span 2;
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+
+        }
+
+    }
+}
+
+//desktop
+@media all and (min-width: vars.$desktop) {
+   .servicios {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+        
+        &__titular {
+        padding-left: 3.5rem;
+        margin-bottom: 2rem;
+        
+            p {
+                font-size: vars.$regular3;
+            }
+
+            h2 {
+                font-size: vars.$big8;
+                margin: 0;
+            }
+
+        }
+
+        &__contenido {
+
+            .card {
+                max-width: 50rem; 
+
+                .textoint {
+
+
+                        h4 {
+                        font-size: vars.$regular3;
+                        margin: 0rem 0;
+                        }
+
+                        p {
+                            font-size: vars.$small-text;
+                            margin: 0;
+                        }
+
+                }
+                
+                .dibujo {
+                    width: 6.5rem;
+                    height: 6.5rem;
+
+                }
+
+               
+            &__uno {
+                grid-template-columns: 0.65fr 2.35fr;
+                margin-bottom: 1.75rem;
+                                          
+               }
+
+            &__dos {
+                grid-template-columns: 0.65fr 2.35fr;
+                margin-bottom: 1.75rem;
+               
+               }
+
+            &__tres {
+                grid-template-columns: 0.65fr 2.35fr;
+                margin-bottom: 1.75rem;
+               
+               }
+
+            }
+
+
+        }
+
+        &__imagen {
+            grid-column: 2;
+            grid-row: 1 / span 2;
+            
+            img {
+                width: auto;
+                height: auto;
+                object-fit: cover;
+                overflow: visible;
+                
+            }
+
+        }
+
+    }
+}
+
+
+
+

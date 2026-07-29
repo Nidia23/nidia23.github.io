@@ -1,0 +1,77 @@
+@use '../core/variables' as vars;
+
+.container-top-destination{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: vars.$text-font;
+   
+    .title{
+        color: vars.$secondary-color;
+        font-size: 1.44rem;
+        text-align: center;
+        letter-spacing: 0.2rem;
+
+                @media (min-width: vars.$tablet),
+                        (min-width: vars.$desktop){
+                    text-align: left;
+                    font-size: 1.5rem;
+                    margin: 2.5rem;
+                }
+    }   
+    .container-image{
+
+        @media (min-width: vars.$tablet){ 
+            display:flex;
+            flex-direction: row;
+        } 
+        @media (min-width: vars.$desktop){
+            display:flex;
+            flex-direction: row;
+        }
+    }
+}
+
+.image{
+    @media(min-width: vars.$tablet){
+        display:flex;
+        flex-wrap: wrap;
+    }
+}
+.container-img-from{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 9.5rem;
+    margin:1rem;
+    font-weight: bold;
+    font-size: 1rem;
+
+        @media (min-width: vars.$tablet),
+            (min-width: vars.$desktop){
+            display:flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            gap:5rem;
+            right: 0;
+        }
+    .from{
+        color: vars.$secondary-color;
+    }
+}
+
+.lucena, .mallorca, .gijon, .sevilla{
+    width: 24rem;
+    height: 30rem;         
+    object-fit: cover; 
+    border-radius: 1.25rem 1.25rem 0 0;
+    display: block;
+
+            @media(min-width: vars.$tablet){
+                height: 17.5rem;   
+            }
+            @media(min-width: vars.$desktop){
+                height: 21rem;
+            }
+}

@@ -1,0 +1,97 @@
+@use '../core/variables' as vars;
+
+body.contact {
+    .header__hero {
+        display: none;
+        }
+
+}
+    .page__contact {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch; 
+        width: 100%;
+        min-height: 60vh;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        
+
+    .page-contact__container {
+
+        @media (min-width: vars.$tablet) {
+                display: flex;
+                flex-direction: row;
+                align-items: stretch;
+                width: 100%;
+                gap: 0.5rem;
+                padding-left: 5rem; 
+                padding-right: 5rem;
+                }
+
+        @media (min-width: vars.$desktop) {
+                inline-size: min(100%, 1000rem); 
+                margin-inline: auto;
+        }
+       
+
+        .page-contact__form {
+            background-color: vars.$background-contact;
+            width: 100%;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 2rem;
+            padding: 2rem;
+            width: 100%;
+            
+
+            .contact-form__title {
+                text-transform: uppercase;
+                font-family: vars.$text-font;
+                font-size: vars.$small-text;
+                color: vars.$secondary-color;
+                font-weight: vars.$title-weight;
+                letter-spacing: 0.3rem;
+
+            }
+
+            .contact-form__input {
+                display: flex;
+                font-size: vars.$small-text;
+                color: vars.$medium-color;
+                font-weight: vars.$title-weight;
+                border-radius: 1.5rem;
+                border: none;
+                padding: 1rem;
+
+                &:focus {
+                    outline: none;             
+                    box-shadow: 0 0 0.2rem grey;
+                }
+            }
+
+            .button {
+                border-radius: 1.5rem;
+                padding: 0.8rem;
+                width: 40%;
+                font-size: vars.$small-text;
+            }
+        }
+    }   
+
+    .page-contact__map {
+        display: inline-block;
+        width: 100%;
+        align-items: center;
+        margin: 0; 
+        padding: 0;
+        overflow: hidden;
+        border-radius: 1rem;
+
+        .contact-map__map {
+            width: 100%;
+            padding-top:0.5rem;
+            }
+        }
+    }

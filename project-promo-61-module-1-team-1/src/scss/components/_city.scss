@@ -1,0 +1,331 @@
+@use '../core/variables' as vars;
+
+body.ciudades {
+    .header__hero {
+        display: none;
+        }
+}
+
+.city__hero {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: vars.$background-city;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    text-align: center;
+    padding: 3rem;
+    gap: 1.5rem;
+    
+
+
+    h1 {
+        font-family: vars.$city-font2;
+        color: vars.$dark-color;
+        font-size: vars.$logo-title-style;
+        margin: 0;
+
+        span {
+            color: vars.$secondary-color;
+            font-size: vars.$bigger;
+            font-weight: vars.$title-weight;
+        }
+    }
+
+    img {
+        width: 95%;
+        height: auto;
+    
+    }
+
+}
+
+.city__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    padding: 1.25rem;
+
+    p {
+        font-family: vars.$city-font2;
+        color: vars.$color-drkgr;
+        font-size: vars.$regular;
+        padding: 1rem 0;
+    }
+
+    img {
+        display: block;
+        width: 80%;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 20%;
+
+    }
+
+}
+
+.city__about {
+    display: flex;
+    flex-direction: column;
+    background-color: vars.$background-city;
+    padding: 1rem;
+
+    h3 {
+        font-family: vars.$city-font2;
+        color: vars.$dark-color;
+        text-align: left;
+        font-size: vars.$logo-title-style;
+
+        span {
+            color: vars.$secondary-color;
+        }
+
+    }
+
+    p {
+        font-family: vars.$city-font2;
+        color: vars.$dark-color;
+        font-size: vars.$regular;
+        padding: 1rem 0;
+        text-align: justify;
+
+    }
+
+    .city__foto3 {
+        display: block;
+        width: 80%;
+        max-width: 10rem;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 20%;
+    }
+}
+
+.city__other {
+    display: flex;
+    flex-direction: row;
+    background-color: vars.$background-city2;
+    padding: 1.2rem;
+
+
+    p {
+        font-family: 'Roboto', sans-serif;
+        color: black;
+        font-weight: vars.$title-weight;
+        text-align: left;
+        font-size: 1rem;
+        margin: 3rem 0;
+
+            a {
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+            color:#ffffff;
+            text-decoration: underline;
+        
+        }
+    }
+
+    }
+}
+
+//tablet
+@media all and (min-width: vars.$tablet) {
+ .city__hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    text-align: center;
+    padding: 4.5rem 3rem;
+
+
+    h1 {
+        font-size: vars.$bigger;
+        padding: 0.5rem;
+
+    span {
+        display: block;
+        color: vars.$secondary-color;
+        font-size: vars.$huge;
+        font-weight: 700;
+    }
+}
+
+    img {
+        width: 80%;
+        height: auto;
+        max-width: 31rem;
+
+    }
+
+}
+
+.city__info {
+    display: grid;
+    max-width: 130rem;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "parr1 parr1"
+    "foto1 parr2"
+    "parr3 foto2";
+    gap: 1.5rem;
+    padding: 3rem;
+    text-align: justify;
+
+    .city__parr1 { grid-area: parr1; }
+    .city__parr2 { grid-area: parr2; }
+    .city__parr3 { grid-area: parr3; }
+    
+
+    p {
+        font-size: vars.$small-text;
+        padding: 1.5rem 0;
+        margin: 0;
+    }
+
+    .city__foto1 { 
+    grid-area: foto1;
+    width: 100%;
+    max-width: 31rem;
+    height: auto;
+    border-radius: 20%;
+
+    }
+
+    .city__foto2 { 
+        grid-area: foto2;
+        width: 100%;
+        max-width: 31rem;
+        height: auto;
+        border-radius: 20%;
+    }
+
+}
+
+.city__about {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem;
+
+    h3 {
+        text-align: left;
+        font-size: vars.$text-style;
+        margin: 0;
+
+    }
+
+    .city__about-apartado {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 20px;
+        max-width: 56rem;
+
+        p {
+            font-size: vars.$regular;
+            padding: .8rem 0;
+            text-align: justify;
+
+        }
+
+    .city__foto3 {
+        display: block;
+        width: 7.8rem;
+        max-width: 18rem;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 20%;
+    }
+    }
+}
+
+.city__other {
+    padding: 2rem;
+    margin: 0;
+
+    p {
+    font-size: vars.$small-text;
+    margin: 0;
+    }
+
+}
+}   
+
+
+//desktop
+@media all and (min-width: vars.$desktop) {
+
+.city__hero {
+    min-height: 60vh;
+    padding: 4.5rem 0;
+
+
+    h1 {
+        font-size: vars.$bigger5;
+        padding: 1rem;
+
+    span {
+        font-size: vars.$huge5;
+    }
+}
+
+    img {
+        width: 95%;
+        max-width: 37.5rem;
+
+    }
+
+}
+
+.city__info {
+    max-width: 150rem;
+    gap: 1rem;
+    padding: 8rem;
+
+    .city__parr1 { grid-area: parr1; }
+    .city__parr2 { grid-area: parr2; }
+    .city__parr3 { grid-area: parr3; }
+    
+
+    p {
+        font-size: vars.$regular5;
+    }
+
+}
+
+.city__about {
+    padding: 3rem;
+
+    h3 {
+        font-size: vars.$logo-title-style;
+    }
+
+    .city__about-apartado {
+
+        p {
+            font-size: vars.$small-text;
+            padding: 1rem 0;
+
+        }
+
+    .city__foto3 {
+        width: 9.4rem;
+    }
+    }
+}
+
+.city__other {
+    padding: 3rem;
+
+    p {
+    font-size: vars.$small-text;
+    } 
+    
+
+}
+}
